@@ -33,7 +33,13 @@ Install MongoDB
 ```brew install mongodb```
 
 Run MongoDB in its own Terminal tab with
-```mongod```
+```mongod ```
 
 After that you can start the web application with
 ```node web.js```
+
+What happens here
+===
+Instead of cluttering the web.js (also known as app.js or server.js), we separate the configuration for the start of the server from the routes and database configuration.
+
+This allows easier maintanence.
