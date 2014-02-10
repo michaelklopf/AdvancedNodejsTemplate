@@ -23,6 +23,9 @@ Background
 You will find an article describing how to use module.exports here http://openmymind.net/2012/2/3/Node-Require-and-Exports/
 
 I took the main structure of this app from here http://scotch.io/tutorials/javascript/node-and-angular-to-do-app-application-organization-and-structure
+
+A nice tutorial for MongoDB, in relation to express and mongoose
+http://theholmesoffice.com/node-js-express-and-mongoose/
 Getting started
 ===
 As with the starter template we set up node and load the necessary modules.
