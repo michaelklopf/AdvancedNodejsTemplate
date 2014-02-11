@@ -3,7 +3,7 @@ html(lang="en")
     head
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        title NodejsTemplate
+        title Advanced NodejsTemplate
         // CSS content
         link(rel='stylesheet', href='/css/basic.css')
         link(rel='stylesheet', href='/css/bootstrap.min.css')
@@ -34,13 +34,28 @@ html(lang="en")
                 div.page-header
                     h1 Welcome to the template.
                 p.lead This is a lead:
-                div#inputarea.row
-                div#contentarea
+                //div#inputarea.row
+                form(role='form' id='example-form')
+                    div.form-group
+                        label(for='example-input-name') Example name input
+                        input(type='text' class='form-control' id='exampleNameInput' placeholder='Enter Name')
+                    div.form-group
+                        label(for='example-input-mail') Example mail input
+                        input(type='mail' class='form-control' id='exampleMailInput' placeholder='Enter Mail')
+                    button(type='submit' class='btn btn-default') Add Entry
+                div#examples
 
         // Footer
         div#footer
             div.container
                 p.text-muted.credit Page made by me, <a href="http://twitter.com/authorname/">@authorname</a>.
+        
+        // Template scripts
+        script(id='exampleTemplate' type='text/template')
+            ul
+                li <%= name %>
+                li <%= mail %>
+            button(class='delete') Delete
         
         // Bootstrap core JavaScript, placed here for faster page load
         script(src='/js/jquery-2.0.3.min.js')

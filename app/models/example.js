@@ -2,8 +2,8 @@
 var mongoose    = require('mongoose');
 
 var exampleSchema = new mongoose.Schema({
-    text    : String,
-    date      : Date
+    name    : String,
+    mail    : String
 });
 
 module.exports = mongoose.model('Example', exampleSchema);
