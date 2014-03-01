@@ -1,7 +1,6 @@
 // app/routes.js
 
 // load jade for html processing
-var jade        = require('jade');
 
 // load models
 var Example     = require('./models/example');
@@ -22,9 +21,10 @@ module.exports = function(app) {
     });
     
     // application routes
-    app.get('*', function(req, res) {
-        var data = jade.renderFile('./static/index.jade');
+    app.get('/', function(req, res) {
+        //var data = jade.renderFile('./static/index.jade');
         res.contentType('text/html');
-        res.send(200, data);
+        //res.send(200, data);
+        res.render('index');
     });
 };

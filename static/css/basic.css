@@ -26,3 +26,69 @@ body {
 code {
   font-size: 80%;
 }
+#contentLead {
+  margin: 20px 0;
+}
+/*
+body {
+    background-color: #eee;
+}
+
+.examples {
+    outline: 1px solid #aaa;
+    width: 350px;
+    height: 130px;
+    background-color: #fff;
+    float: left;
+    margin: 5px;
+}
+
+.examples ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.examples button {
+    float: right;
+    margin: 10px;
+}
+*/
+/*
+#addExample label {
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 25px;
+}
+
+#addExample label, #addExample input {
+    display: block;
+    margin-bottom: 10px;
+    float: left;
+}
+
+#addExample label[for="exampleNameInput"], #addExample label[for="exampleMailInput"] {
+    clear: both;
+}
+
+#addExample button {
+    display: block;
+    margin: 5px 20px 10px 10px;
+    float: right;
+    clear: both;
+}
+
+#addExample div {
+    width: 550px;
+}
+
+#addExample div:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
+*/
