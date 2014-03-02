@@ -2,5 +2,6 @@
 var app = app || {};
 
 app.Examples = Backbone.Collection.extend({
-    model : app.Example
+    model : app.Example,
+    url: '/api/examples'
 });

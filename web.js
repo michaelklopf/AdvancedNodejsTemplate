@@ -17,10 +17,12 @@ mongoose.connect(database.url);
 var app = express();
 
 app.configure(function() {
+    app.use(express.bodyParser());
+	app.use(express.methodOverride());
+    app.use(app.router);
     app.use(stylus.middleware(__dirname + '/static'));
     app.use("/css" , express.static(__dirname + '/static/css'));
     app.use("/js" , express.static(__dirname + '/static/js'));
-    app.use(express.bodyParser());
     app.set('views', __dirname + '/app/views');
     app.engine('jade', require('jade').__express);
     app.set('view engine', 'jade');

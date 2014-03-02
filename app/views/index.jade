@@ -35,17 +35,18 @@ html(lang="en")
                     h1 Welcome to the template.
                 p.lead This is a lead:
                 //div#inputarea.row
-                form(role='form' id='addExample')
-                    div.form-group
-                        label(for='example-input-name') Example name input
-                        input(type='text' class='form-control' id='exampleNameInput' placeholder='Enter Name')
-                    div.form-group
-                        label(for='example-input-mail') Example mail input
-                        input(type='mail' class='form-control' id='exampleMailInput' placeholder='Enter Mail')
-                    button(type='submit' class='btn btn-default' id="add") Add Entry
-                    
-                p.lead#contentLead Here land the examples:
-                    div#examples
+                div#examples
+                    form(role='form' id='addExample')
+                        div.form-group
+                            label(for='example-input-name') Example name input
+                            input(type='text' class='form-control' id='exampleNameInput' placeholder='Enter Name')
+                        div.form-group
+                            label(for='example-input-mail') Example mail input
+                            input(type='mail' class='form-control' id='exampleMailInput' placeholder='Enter Mail')
+                        button(type='submit' class='btn btn-default' id="add") Add Entry
+
+                //p.lead#contentLead Here land the examples:
+                    //div#examples
 
         // Footer
         div#footer
@@ -60,12 +61,13 @@ html(lang="en")
             button(class='delete') Delete
         
         // Bootstrap core JavaScript, placed here for faster page load
-        script(type='text/javascript' src='/js/jquery-2.0.3.min.js')
-        //script(src='/js/bootstrap.min.js')
-        //script(src='/js/backbone-min.js')
-        //script(src='/js/underscore-min.js')
-        //script(src='/js/models/example.js')
-        //script(src='/js/collections/examples.js')
-        //script(src='/js/views/example.js')
-        //script(src='/js/views/examples.js')
-        //script(src='/js/app.js')
+        script(type='text/javascript' src='/js/libraries/jquery-2.0.3.min.js')
+        script(type='text/javascript' src='/js/libraries/bootstrap.min.js')
+        script(type='text/javascript' src='/js/libraries/underscore-min.js')
+        script(type='text/javascript' src='/js/libraries/backbone-min.js')
+        
+        script(type='text/javascript' src='/js/models/example.js')
+        script(type='text/javascript' src='/js/collections/examples.js')
+        script(type='text/javascript' src='/js/views/example.js')
+        script(type='text/javascript' src='/js/views/examples.js')
+        script(type='text/javascript' src='/js/app.js')
