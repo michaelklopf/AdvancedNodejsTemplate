@@ -17,6 +17,8 @@ bower - not really part of the template per se, as I copied my content from an o
 
 Bootstrap - front-end framework for easier and faster web development. Comes with a lot of web site elements, already styled, like buttons or sliders. Responsiveness is an elemental feature http://getbootstrap.com
 
+Backbone - front-end JavaScript framework. Helps to structure code in models and views. The latter includes the controller functionality of the MVC pattern.
+
 restler - Library to consume other web APIs. https://github.com/danwrong/restler
 Background
 ===
@@ -27,6 +29,9 @@ I took the main structure of this app from here http://scotch.io/tutorials/javas
 A nice tutorial for MongoDB, in relation to express and mongoose
 http://theholmesoffice.com/node-js-express-and-mongoose/
 Getting started
+
+The book on which I based the Backbone structure
+http://addyosmani.github.io/backbone-fundamentals
 ===
 As with the starter template we set up node and load the necessary modules.
 
@@ -43,6 +48,14 @@ After that you can start the web application with
 
 What happens here
 ===
-Instead of cluttering the web.js (also known as app.js or server.js), we separate the configuration for the start of the server from the routes and database configuration.
+Instead of cluttering the web.js (also known as app.js or server.js), we separate the configuration for the start of the server from the routes and database configuration. That enables us to easier maintain the code. All back-end related code is saved in the app folder.
 
-This allows easier maintanence.
+The Backbone part works in similar ways. The code is divided between collections, models, and views. The entry point is called app.js, all the Backbone code is found in the js folder of the static (or public) content.
+
+In routes.js we created a REST API to operate on the database, which is called by our front-end code.
+
+examples.js is the name of the collection, which holds all the example.js objects. An example holds a name and a mail. These are saved in the database as is.
+
+To do
+===
+The next step is to make use of MarionetteJS and disover more Backbone features. On the backend side, we need to structure the routes better, to prevent the routes.js from growing too large.
