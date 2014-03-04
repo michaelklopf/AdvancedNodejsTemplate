@@ -7,12 +7,14 @@ var Example     = require('./models/example');
 
 // expose routes
 module.exports = function(app) {
+    /*
     app.get( '/api', function( request, response ) {
 	   response.send( 'Library API is running' );
     });
+    */
     
     // methods to manipulate data
-    app.get('/api/examples', function(req, res) {
+    app.get('/examples', function(req, res) {
         return Example.find(function(err, examples) {
             if(!err) {
                 return res.send(examples);
@@ -22,7 +24,7 @@ module.exports = function(app) {
         });
     });
     
-    app.post('/api/examples', function(req, res) {
+    app.post('/examples', function(req, res) {
         var example = new Example({
             name: req.body.name,
             mail: req.body.mail
@@ -37,7 +39,7 @@ module.exports = function(app) {
         });
     });
     
-    app.get('/api/examples/:id', function(req, res) {
+    app.get('/examples/:id', function(req, res) {
         return Example.findById(req.params.id, function(err, example) {
             if(!err) {
                 return res.send(example);
@@ -47,7 +49,7 @@ module.exports = function(app) {
         });
     });
         
-    app.put('api/examples/:id', function(req, res) {
+    app.put('/examples/:id', function(req, res) {
         console.log('Updating example ' + req.body.name);
         return Example.findById(req.params.id, function(err, example) {
             example.name = req.body.name;
@@ -64,7 +66,7 @@ module.exports = function(app) {
         });
     });
         
-    app.delete('api/examples/:id', function(req, res) {
+    app.delete('/examples/:id', function(req, res) {
         console.log('Deleting example with id: ' + req.params.id);
         return Example.findById(req.params.id, function(err, example) {
             if(!err) {
