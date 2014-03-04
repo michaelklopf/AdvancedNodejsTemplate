@@ -69,12 +69,14 @@ module.exports = function(app) {
     app.delete('/examples/:id', function(req, res) {
         console.log('Deleting example with id: ' + req.params.id);
         return Example.findById(req.params.id, function(err, example) {
-            if(!err) {
-                console.log('Example removed');
-                return res.send('');
-            } else {
-                console.log(err);
-            }
+            return example.remove(function(err) {
+                if(!err) {
+                    console.log('Example removed');
+                    return res.send('');
+                } else {
+                    console.log(err);
+                }
+            });
         });
     });
     
