@@ -1,4 +1,5 @@
 // app/models/example.js
+
 var mongoose    = require('mongoose');
 
 var exampleSchema = new mongoose.Schema({
