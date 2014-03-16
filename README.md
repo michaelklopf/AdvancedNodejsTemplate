@@ -32,6 +32,8 @@ Getting started
 
 The book on which I based the Backbone structure
 http://addyosmani.github.io/backbone-fundamentals
+
+Set-Up
 ===
 As with the starter template we set up node and load the necessary modules.
 
