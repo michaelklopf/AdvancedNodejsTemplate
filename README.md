@@ -71,4 +71,4 @@ To do
 ===
 The next step is to make use of MarionetteJS and discover more Backbone features. On the backend side, we need to structure the routes better, to prevent the routes.js from growing too large.
 
-I'm also trying to add Jasmin for testing.
+Before that we add passport for authentification. I'm also trying to add Jasmin for testing.
