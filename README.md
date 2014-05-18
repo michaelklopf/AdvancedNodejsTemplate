@@ -20,6 +20,12 @@ Bootstrap - front-end framework for easier and faster web development. Comes wit
 Backbone - front-end JavaScript framework. Helps to structure code in models and views. The latter includes the controller functionality of the MVC pattern.
 
 restler - Library to consume other web APIs. https://github.com/danwrong/restler
+
+About testing:
+Jasmine - Testing framework (not yet implemented) description here http://blog.codeship.io/2013/08/20/testing-tuesday-19-how-to-test-node-js-applications-with-jasmine.html
+
+http://thewayofcode.wordpress.com/2013/04/21/how-to-build-and-test-rest-api-with-nodejs-express-mocha/
+
 Background
 ===
 You will find an article describing how to use module.exports here http://openmymind.net/2012/2/3/Node-Require-and-Exports/
@@ -45,6 +51,9 @@ Install MongoDB
 Run MongoDB in its own Terminal tab with
 ```mongod ```
 
+If this does not work, make a folder where the database should reside, and execute the command
+```mongod --dbpath ~/your/mongodbs/```
+
 After that you can start the web application with
 ```node web.js```
 
@@ -60,4 +69,6 @@ examples.js is the name of the collection, which holds all the example.js object
 
 To do
 ===
-The next step is to make use of MarionetteJS and disover more Backbone features. On the backend side, we need to structure the routes better, to prevent the routes.js from growing too large.
+The next step is to make use of MarionetteJS and discover more Backbone features. On the backend side, we need to structure the routes better, to prevent the routes.js from growing too large.
+
+I'm also trying to add Jasmin for testing.
